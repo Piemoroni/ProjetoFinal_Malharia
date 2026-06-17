@@ -58,11 +58,11 @@ Projeto da aula de Projetos(PSOF2) do SENAI
 =======
    ### Divisão de Tarefas:
    - **Alice:** Front-End e Protótipos
-   - **Letícia:** BackEnd, DER, FrontEnd e Protótipos
-   - **Murilo:** BackEnd, Documentação PDF, Teste e Relatórios
-   - **Natalia:** BackEnd e  FrontEnd
-   - **Nicollas:** Protótipos, Back-End, Documentação MarkDown
-   - **Pietra:** Back-End e Front-End e Relatórios
+   - **Letícia:** DER, FrontEnd e Protótipos
+   - **Murilo:** Documentação PDF, Teste e Relatórios
+   - **Natalia:** BackEnd 
+   - **Nicollas:** Protótipos, Documentação MarkDown e Mobile
+   - **Pietra:** Back-End e Coordenação da Equipe
 
    ### Funções dos Membros
    |Função|Membro|
