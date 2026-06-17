@@ -1,0 +1,355 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-04-24T13:21:48.879Z",
+  "__export_source": "backend-aula",
+  "resources": [
+    {
+      "_id": "wrk_backend",
+      "_type": "workspace",
+      "name": "Backend Aula"
+    },
+    {
+      "_id": "fld_malhas",
+      "_type": "request_group",
+      "parentId": "wrk_backend",
+      "name": "malhas"
+    },
+    {
+      "_id": "fld_Clientes",
+      "_type": "request_group",
+      "parentId": "fld_malhas",
+      "name": "Clientes"
+    },
+    {
+      "_id": "req_Clientes_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Clientes",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/clientes/listar"
+    },
+    {
+      "_id": "req_Clientes_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Clientes",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/clientes/buscar/:id"
+    },
+    {
+      "_id": "req_Clientes_POST",
+      "_type": "request",
+      "parentId": "fld_Clientes",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/clientes/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"telefone\": \"string\",\n  \"endereco\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Clientes_PUT",
+      "_type": "request",
+      "parentId": "fld_Clientes",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/clientes/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"telefone\": \"string\",\n  \"endereco\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Clientes_DELETE",
+      "_type": "request",
+      "parentId": "fld_Clientes",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/clientes/excluir/:id"
+    },
+    {
+      "_id": "fld_Roupas",
+      "_type": "request_group",
+      "parentId": "fld_malhas",
+      "name": "Roupas"
+    },
+    {
+      "_id": "req_Roupas_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Roupas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/roupas/listar"
+    },
+    {
+      "_id": "req_Roupas_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Roupas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/roupas/buscar/:id"
+    },
+    {
+      "_id": "req_Roupas_POST",
+      "_type": "request",
+      "parentId": "fld_Roupas",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/roupas/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"descricao\": \"string\",\n  \"valor\": 0,\n  \"quantidade\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Roupas_PUT",
+      "_type": "request",
+      "parentId": "fld_Roupas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/roupas/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"descricao\": \"string\",\n  \"valor\": 0,\n  \"quantidade\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Roupas_DELETE",
+      "_type": "request",
+      "parentId": "fld_Roupas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/roupas/excluir/:id"
+    },
+    {
+      "_id": "fld_Encomendas",
+      "_type": "request_group",
+      "parentId": "fld_malhas",
+      "name": "Encomendas"
+    },
+    {
+      "_id": "req_Encomendas_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Encomendas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/encomendas/listar"
+    },
+    {
+      "_id": "req_Encomendas_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Encomendas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/encomendas/buscar/:id"
+    },
+    {
+      "_id": "req_Encomendas_POST",
+      "_type": "request",
+      "parentId": "fld_Encomendas",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/encomendas/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"clienteId\": 0,\n  \"roupaId\": 0,\n  \"descricao_personalizada\": \"string\",\n  \"quantidade\": 0,\n  \"valor\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Encomendas_PUT",
+      "_type": "request",
+      "parentId": "fld_Encomendas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/encomendas/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"clienteId\": 0,\n  \"roupaId\": 0,\n  \"descricao_personalizada\": \"string\",\n  \"quantidade\": 0,\n  \"valor\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Encomendas_DELETE",
+      "_type": "request",
+      "parentId": "fld_Encomendas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/encomendas/excluir/:id"
+    },
+    {
+      "_id": "fld_Pedidos",
+      "_type": "request_group",
+      "parentId": "fld_malhas",
+      "name": "Pedidos"
+    },
+    {
+      "_id": "req_Pedidos_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Pedidos",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/pedidos/listar"
+    },
+    {
+      "_id": "req_Pedidos_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Pedidos",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/pedidos/buscar/:id"
+    },
+    {
+      "_id": "req_Pedidos_POST",
+      "_type": "request",
+      "parentId": "fld_Pedidos",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/pedidos/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"clienteId\": 0,\n  \"roupaId\": 0,\n  \"quantidade\": 0,\n  \"valor_final\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Pedidos_PUT",
+      "_type": "request",
+      "parentId": "fld_Pedidos",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/pedidos/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"clienteId\": 0,\n  \"roupaId\": 0,\n  \"quantidade\": 0,\n  \"valor_final\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Pedidos_DELETE",
+      "_type": "request",
+      "parentId": "fld_Pedidos",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/pedidos/excluir/:id"
+    }
+  ]
+}

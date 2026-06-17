@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malharia São José</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Malharia São José</h1>
+        <button onclick="abrirModalCliente()"> Novo Cliente </button>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Menu</h2>
+            <button onclick="carregarDashboard()"> Dashboard </button>
+            <button onclick="carregarClientes()"> Clientes </button>
+            <button onclick="carregarRoupas()"> Roupas </button>
+            <button onclick="carregarPedidos()"> Pedidos </button>
+            <button onclick="carregarEncomendas()"> Encomendas </button>
+        </aside>
+
+        <main id="conteudo">
+            <div class="dashboard">
+                <div class="card">
+                    <h3>Clientes</h3>
+                    <p>--</p>
+                </div>
+                <div class="card">
+                    <h3>Roupas</h3>
+                    <p>--</p>
+                </div>
+                <div class="card">
+                    <h3>Pedidos</h3>
+                    <p>--</p>
+                </div>
+                <div class="card">
+                    <h3>Encomendas</h3>
+                    <p>--</p>
+                </div>
+            </div>
+
+            <canvas id="grafico" style="margin-top:30px;"></canvas>
+
+        </main>
+    </div>
+
+    <div id="modalCliente" class="modal oculto">
+        <div class="janela">
+            <h2>Cadastrar Cliente</h2>
+            <form id="formCliente">
+
+                <label>Nome</label>
+                <input type="text" id="nome" required>
+
+                <label>Email</label>
+                <input type="email" id="email" required>
+
+                <label>Telefone</label>
+                <input type="text" id="telefone" required>
+
+                <label>Endereço</label>
+                <input type="text" id="endereco" required>
+
+                <div class="formButtons">
+                    <button type="button" onclick="modalCliente.classList.add('oculto')"> Cancelar </button>
+                    <button type="submit"> Salvar </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="modalRoupa" class="modal oculto">
+        <div class="janela">
+            <h2>Cadastrar Roupa</h2>
+            <form id="formRoupa">
+
+                <label>Nome</label>
+                <input type="text" id="nomeRoupa" required>
+
+                <label>Descrição</label>
+                <textarea id="descricaoRoupa"></textarea>
+
+                <label>Valor</label>
+                <input type="number" id="valorRoupa" required>
+
+                <label>Quantidade</label>
+                <input type="number" id="quantidadeRoupa" required>
+
+                <div class="formButtons">
+                    <button type="button" onclick="modalRoupa.classList.add('oculto')"> Cancelar </button>
+                    <button type="submit"> Salvar </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="modalPedido" class="modal oculto">
+        <div class="janela">
+            <h2>Novo Pedido</h2>
+
+            <form id="formPedido">
+                <label>Cliente</label>
+                <select id="clientePedido"></select>
+
+                <label>Roupa</label>
+                <select id="roupaPedido"></select>
+
+                <label>Quantidade</label>
+                <input type="number" id="quantidadePedido">
+
+                <div class="formButtons">
+                    <button type="button" onclick="modalPedido.classList.add('oculto')"> Cancelar </button>
+                    <button type="submit"> Salvar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="modalEncomenda" class="modal oculto">
+        <div class="janela">
+            <h2>Nova Encomenda</h2>
+            <form id="formEncomenda">
+
+                <label>Cliente</label>
+                <select id="clienteEncomenda"></select>
+
+                <label>Roupa</label>
+                <select id="roupaEncomenda"></select>
+
+                <label>Descrição Personalizada</label>
+                <textarea id="descricaoPersonalizada"></textarea>
+
+                <label>Quantidade</label>
+                <input type="number" id="quantidadeEncomenda">
+
+                <div class="formButtons">
+                    <button type="button" onclick="modalEncomenda.classList.add('oculto')"> Cancelar </button>
+                    <button type="submit"> Salvar </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
